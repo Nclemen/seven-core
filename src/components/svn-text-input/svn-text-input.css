@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+
+input {
+  @apply rounded-md focus:border-purple-700 shadow 
+}
