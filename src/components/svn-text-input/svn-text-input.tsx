@@ -8,6 +8,11 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class SvnTextInput {
 
   /**
+   * the id of the component element
+   */
+  @Prop() el_id:string;
+
+  /**
    * the name of the element
    */
   @Prop() name:string;
@@ -28,11 +33,6 @@ export class SvnTextInput {
   @Prop() disabled: boolean = false;
 
   /**
-   * prop to determine which type of text input field is used
-   */
-  @Prop() type: string = "text";
-
-  /**
    * the value of the input field
    */
   @Prop() value: string;
@@ -42,20 +42,27 @@ export class SvnTextInput {
    */
   @Prop() autocomplete: boolean = false;
 
+  @Prop({ mutable: true }) symbol: string = "$";
+
+  changeSymbol(){
+    this.symbol == 'hello';
+    console.log(this);
+  }
+
   render() {
     return (
       <Host>
         <input
-          class="bg-black"
-          // class={ (this.center ?  'textcenter' : 'bg-amber-400' ) }
+          // class="text-center"
+          id={this.el_id}
+          class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           name={this.name}
           disabled={this.disabled}
-          type={this.type}
+          type="text"
           placeholder={this.placeholder}
           value={this.value}
           // autocomplete={this.autocomplete}
         />
-        <slot></slot>
       </Host>
     );
   }

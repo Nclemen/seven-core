@@ -20,6 +20,10 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SvnLabel {
+        "input": string;
+        "owner": string;
+    }
     interface SvnTextInput {
         /**
           * prop to determine whether or not the autocomplete is turned on for the input field
@@ -34,6 +38,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * the id of the component element
+         */
+        "el_id": string;
+        /**
           * the name of the element
          */
         "name": string;
@@ -41,14 +49,77 @@ export namespace Components {
           * the placeholder for the text input
          */
         "placeholder": string;
-        /**
-          * prop to determine which type of text input field is used
-         */
-        "type": string;
+        "symbol": string;
         /**
           * the value of the input field
          */
         "value": string;
+    }
+    interface SvnTextarea {
+        /**
+          * turn on automatic capitalization
+         */
+        "autocapitalize": string;
+        /**
+          * set to on to turn on autocorrect(is turned off by default)
+         */
+        "autocorrect": string;
+        /**
+          * the columns for the text area element
+         */
+        "cols": number;
+        /**
+          * set to true to disable input for textarea (default = false)
+         */
+        "disabled": boolean;
+        /**
+          * set to true to automatically focus on the text area when page is loaded (disabled by default)
+         */
+        "focusTarget": boolean;
+        /**
+          * the form which the text area belongs to
+         */
+        "form": string;
+        /**
+          * the maximum amount of characters for textarea
+         */
+        "maxlength": number;
+        /**
+          * the mininmal amount of character for textarea
+         */
+        "minlength": number;
+        /**
+          * the name attribute for textarea
+         */
+        "name": string;
+        /**
+          * a placeholder for the textarea
+         */
+        "placeholder": string;
+        /**
+          * set to true to turn on read only (this does not prevent the users from clicking or selecting in the control)
+         */
+        "readonly": string;
+        /**
+          * set to true if text area is a required field in forms
+         */
+        "required": boolean;
+        /**
+          * the row for the textarea element
+         */
+        "rows": number;
+        /**
+          * set to true to turn on spellcheck, to false to turn off spellcheck and default to use the default setting for spellcheck
+         */
+        "spell": any;
+        /**
+          * the id of the text area which is also being used to bind the label to textarea
+         */
+        "txtid": string;
+        /**
+          * set to hard, soft or off
+         */
+        "wrap": string;
     }
 }
 declare global {
@@ -58,15 +129,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSvnLabelElement extends Components.SvnLabel, HTMLStencilElement {
+    }
+    var HTMLSvnLabelElement: {
+        prototype: HTMLSvnLabelElement;
+        new (): HTMLSvnLabelElement;
+    };
     interface HTMLSvnTextInputElement extends Components.SvnTextInput, HTMLStencilElement {
     }
     var HTMLSvnTextInputElement: {
         prototype: HTMLSvnTextInputElement;
         new (): HTMLSvnTextInputElement;
     };
+    interface HTMLSvnTextareaElement extends Components.SvnTextarea, HTMLStencilElement {
+    }
+    var HTMLSvnTextareaElement: {
+        prototype: HTMLSvnTextareaElement;
+        new (): HTMLSvnTextareaElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "svn-label": HTMLSvnLabelElement;
         "svn-text-input": HTMLSvnTextInputElement;
+        "svn-textarea": HTMLSvnTextareaElement;
     }
 }
 declare namespace LocalJSX {
@@ -84,6 +169,10 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SvnLabel {
+        "input"?: string;
+        "owner"?: string;
+    }
     interface SvnTextInput {
         /**
           * prop to determine whether or not the autocomplete is turned on for the input field
@@ -98,6 +187,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * the id of the component element
+         */
+        "el_id"?: string;
+        /**
           * the name of the element
          */
         "name"?: string;
@@ -105,18 +198,83 @@ declare namespace LocalJSX {
           * the placeholder for the text input
          */
         "placeholder"?: string;
-        /**
-          * prop to determine which type of text input field is used
-         */
-        "type"?: string;
+        "symbol"?: string;
         /**
           * the value of the input field
          */
         "value"?: string;
     }
+    interface SvnTextarea {
+        /**
+          * turn on automatic capitalization
+         */
+        "autocapitalize"?: string;
+        /**
+          * set to on to turn on autocorrect(is turned off by default)
+         */
+        "autocorrect"?: string;
+        /**
+          * the columns for the text area element
+         */
+        "cols"?: number;
+        /**
+          * set to true to disable input for textarea (default = false)
+         */
+        "disabled"?: boolean;
+        /**
+          * set to true to automatically focus on the text area when page is loaded (disabled by default)
+         */
+        "focusTarget"?: boolean;
+        /**
+          * the form which the text area belongs to
+         */
+        "form"?: string;
+        /**
+          * the maximum amount of characters for textarea
+         */
+        "maxlength"?: number;
+        /**
+          * the mininmal amount of character for textarea
+         */
+        "minlength"?: number;
+        /**
+          * the name attribute for textarea
+         */
+        "name"?: string;
+        /**
+          * a placeholder for the textarea
+         */
+        "placeholder"?: string;
+        /**
+          * set to true to turn on read only (this does not prevent the users from clicking or selecting in the control)
+         */
+        "readonly"?: string;
+        /**
+          * set to true if text area is a required field in forms
+         */
+        "required"?: boolean;
+        /**
+          * the row for the textarea element
+         */
+        "rows"?: number;
+        /**
+          * set to true to turn on spellcheck, to false to turn off spellcheck and default to use the default setting for spellcheck
+         */
+        "spell"?: any;
+        /**
+          * the id of the text area which is also being used to bind the label to textarea
+         */
+        "txtid"?: string;
+        /**
+          * set to hard, soft or off
+         */
+        "wrap"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "svn-label": SvnLabel;
         "svn-text-input": SvnTextInput;
+        "svn-textarea": SvnTextarea;
     }
 }
 export { LocalJSX as JSX };
@@ -124,7 +282,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "svn-label": LocalJSX.SvnLabel & JSXBase.HTMLAttributes<HTMLSvnLabelElement>;
             "svn-text-input": LocalJSX.SvnTextInput & JSXBase.HTMLAttributes<HTMLSvnTextInputElement>;
+            "svn-textarea": LocalJSX.SvnTextarea & JSXBase.HTMLAttributes<HTMLSvnTextareaElement>;
         }
     }
 }
