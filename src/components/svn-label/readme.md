@@ -9,21 +9,9 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
+| `input`  | `input`   |             | `string` | `undefined` |
 | `owner`  | `owner`   |             | `string` | `undefined` |
 
-
-## Dependencies
-
-### Used by
-
- - [svn-textarea](../svn-textarea)
-
-### Graph
-```mermaid
-graph TD;
-  svn-textarea --> svn-label
-  style svn-label fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

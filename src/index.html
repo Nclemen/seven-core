@@ -14,14 +14,22 @@
     <div class="mb-3 xl:w-96">
       <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
 
+      <svn-form>
+        <svn-label owner="textone">please enter your name</svn-label>
+        <svn-text-input center el_id="textone" value="test@email.com" name="text"
+                        placeholder="jack"></svn-text-input>
 
-      <svn-label owner="textone">please enter your name</svn-label>
-      <svn-text-input center el_id="textone" value="test@email.com" name="text"
-                      placeholder="jack"></svn-text-input>
+        <svn-label>file input</svn-label>
+        <svn-file-input multiple></svn-file-input>
 
-      <svn-label owner="texttwo"> two</svn-label>
-      <svn-textarea focus txtid="texttwo"></svn-textarea>
-      <!--    <svn-text-input center value="tester@email.com" name="text" placeholder="test@example.org" disabled="true"></svn-text-input>-->
+        <svn-label owner="texttwo">textarea ipnut</svn-label>
+        <svn-textarea focus el_id="texttwo"></svn-textarea>
+
+        <svn-label owner="numberinput"></svn-label>
+        <svn-number-input ></svn-number-input>
+        <!--        <svn-select-input el_id="selectinput" options='[{name:"volvo",value:"auto"}, {name:"saab",value:"auto"}, {name:"audi",value:"auto"}, ]'></svn-select-input>-->
+        <!--    <svn-text-input center value="tester@email.com" name="text" placeholder="test@example.org" disabled="true"></svn-text-input>-->
+      </svn-form>
 
     </div>
   </div>
