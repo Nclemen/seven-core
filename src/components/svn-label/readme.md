@@ -9,7 +9,6 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `input`  | `input`   |             | `string` | `undefined` |
 | `owner`  | `owner`   |             | `string` | `undefined` |
 
 

@@ -65,9 +65,11 @@ export class SvnNumberInput {
 
   render() {
     return (
-        <input class="form-control rounded shadow border-2 focus:border-none  border-gray-300" id={this.el_id} type="number"
-               name={this.name}
+        <input class="form-control block w-full rounded shadow border focus:border-none border-gray-300"
+               id={this.el_id}
+               type="number"
                disabled={this.disabled}
+               name={this.name}
                readonly={this.readonly}
                min={this.min}
                max={this.max}

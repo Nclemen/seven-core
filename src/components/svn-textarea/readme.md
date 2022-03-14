@@ -22,6 +22,7 @@
 | `placeholder`    | `placeholder`    | a placeholder for the textarea                                                                                           | `string`  | `undefined` |
 | `readonly`       | `readonly`       | set to true to turn on read only (this does not prevent the users from clicking or selecting in the control)             | `string`  | `undefined` |
 | `required`       | `required`       | set to true if text area is a required field in forms                                                                    | `boolean` | `undefined` |
+| `resize_disable` | `resize_disable` | attribute to enable or disable resize                                                                                    | `boolean` | `false`     |
 | `rows`           | `rows`           | the row for the textarea element                                                                                         | `number`  | `undefined` |
 | `spell`          | `spell`          | set to true to turn on spellcheck, to false to turn off spellcheck and default to use the default setting for spellcheck | `any`     | `undefined` |
 | `wrap`           | `wrap`           | set to hard, soft or off                                                                                                 | `string`  | `undefined` |

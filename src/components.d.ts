@@ -20,17 +20,31 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SvnCheckboxInput {
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        "name": string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options": any;
+        "value": string;
+    }
     interface SvnFileInput {
         /**
           * the id of component
          */
         "el_id": string;
+        /**
+          * set to true to turn on multiple file select
+         */
         "multiple": boolean;
     }
     interface SvnForm {
     }
     interface SvnLabel {
-        "input": string;
         "owner": string;
     }
     interface SvnNumberInput {
@@ -79,13 +93,24 @@ export namespace Components {
          */
         "value": string;
     }
+    interface SvnRadioInput {
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        "inputName": string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options": any;
+    }
     interface SvnSelectInput {
         /**
           * the id of component
          */
         "el_id": string;
         "multiple": boolean;
-        "options": string;
+        "options": any;
     }
     interface SvnTextInput {
         /**
@@ -171,6 +196,10 @@ export namespace Components {
          */
         "required": boolean;
         /**
+          * attribute to enable or disable resize
+         */
+        "resize_disable": boolean;
+        /**
           * the row for the textarea element
          */
         "rows": number;
@@ -190,6 +219,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLSvnCheckboxInputElement extends Components.SvnCheckboxInput, HTMLStencilElement {
+    }
+    var HTMLSvnCheckboxInputElement: {
+        prototype: HTMLSvnCheckboxInputElement;
+        new (): HTMLSvnCheckboxInputElement;
     };
     interface HTMLSvnFileInputElement extends Components.SvnFileInput, HTMLStencilElement {
     }
@@ -215,6 +250,12 @@ declare global {
         prototype: HTMLSvnNumberInputElement;
         new (): HTMLSvnNumberInputElement;
     };
+    interface HTMLSvnRadioInputElement extends Components.SvnRadioInput, HTMLStencilElement {
+    }
+    var HTMLSvnRadioInputElement: {
+        prototype: HTMLSvnRadioInputElement;
+        new (): HTMLSvnRadioInputElement;
+    };
     interface HTMLSvnSelectInputElement extends Components.SvnSelectInput, HTMLStencilElement {
     }
     var HTMLSvnSelectInputElement: {
@@ -235,10 +276,12 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "svn-checkbox-input": HTMLSvnCheckboxInputElement;
         "svn-file-input": HTMLSvnFileInputElement;
         "svn-form": HTMLSvnFormElement;
         "svn-label": HTMLSvnLabelElement;
         "svn-number-input": HTMLSvnNumberInputElement;
+        "svn-radio-input": HTMLSvnRadioInputElement;
         "svn-select-input": HTMLSvnSelectInputElement;
         "svn-text-input": HTMLSvnTextInputElement;
         "svn-textarea": HTMLSvnTextareaElement;
@@ -259,17 +302,31 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SvnCheckboxInput {
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        "name"?: string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options"?: any;
+        "value"?: string;
+    }
     interface SvnFileInput {
         /**
           * the id of component
          */
         "el_id"?: string;
+        /**
+          * set to true to turn on multiple file select
+         */
         "multiple"?: boolean;
     }
     interface SvnForm {
     }
     interface SvnLabel {
-        "input"?: string;
         "owner"?: string;
     }
     interface SvnNumberInput {
@@ -318,13 +375,24 @@ declare namespace LocalJSX {
          */
         "value"?: string;
     }
+    interface SvnRadioInput {
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        "inputName"?: string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options"?: any;
+    }
     interface SvnSelectInput {
         /**
           * the id of component
          */
         "el_id"?: string;
         "multiple"?: boolean;
-        "options"?: string;
+        "options"?: any;
     }
     interface SvnTextInput {
         /**
@@ -410,6 +478,10 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
         /**
+          * attribute to enable or disable resize
+         */
+        "resize_disable"?: boolean;
+        /**
           * the row for the textarea element
          */
         "rows"?: number;
@@ -424,10 +496,12 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "svn-checkbox-input": SvnCheckboxInput;
         "svn-file-input": SvnFileInput;
         "svn-form": SvnForm;
         "svn-label": SvnLabel;
         "svn-number-input": SvnNumberInput;
+        "svn-radio-input": SvnRadioInput;
         "svn-select-input": SvnSelectInput;
         "svn-text-input": SvnTextInput;
         "svn-textarea": SvnTextarea;
@@ -438,10 +512,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "svn-checkbox-input": LocalJSX.SvnCheckboxInput & JSXBase.HTMLAttributes<HTMLSvnCheckboxInputElement>;
             "svn-file-input": LocalJSX.SvnFileInput & JSXBase.HTMLAttributes<HTMLSvnFileInputElement>;
             "svn-form": LocalJSX.SvnForm & JSXBase.HTMLAttributes<HTMLSvnFormElement>;
             "svn-label": LocalJSX.SvnLabel & JSXBase.HTMLAttributes<HTMLSvnLabelElement>;
             "svn-number-input": LocalJSX.SvnNumberInput & JSXBase.HTMLAttributes<HTMLSvnNumberInputElement>;
+            "svn-radio-input": LocalJSX.SvnRadioInput & JSXBase.HTMLAttributes<HTMLSvnRadioInputElement>;
             "svn-select-input": LocalJSX.SvnSelectInput & JSXBase.HTMLAttributes<HTMLSvnSelectInputElement>;
             "svn-text-input": LocalJSX.SvnTextInput & JSXBase.HTMLAttributes<HTMLSvnTextInputElement>;
             "svn-textarea": LocalJSX.SvnTextarea & JSXBase.HTMLAttributes<HTMLSvnTextareaElement>;

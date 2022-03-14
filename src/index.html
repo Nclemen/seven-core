@@ -15,22 +15,34 @@
       <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
 
       <svn-form>
-        <svn-label owner="textone">please enter your name</svn-label>
-        <svn-text-input center el_id="textone" value="test@email.com" name="text"
-                        placeholder="jack"></svn-text-input>
+        <svn-label owner="textone">text input:</svn-label>
+        <svn-text-input el_id="textone" name="text"
+                        placeholder="text"></svn-text-input>
 
-        <svn-label>file input</svn-label>
-        <svn-file-input multiple></svn-file-input>
+        <svn-label owner="fileinput">file input:</svn-label>
+        <svn-file-input multiple el_id="fileinput"></svn-file-input>
 
-        <svn-label owner="texttwo">textarea ipnut</svn-label>
-        <svn-textarea focus el_id="texttwo"></svn-textarea>
+        <svn-label owner="texttwo">textarea input:</svn-label>
+        <svn-textarea el_id="texttwo" resize_disable="true" placeholder="enter your message..."></svn-textarea>
 
-        <svn-label owner="numberinput"></svn-label>
-        <svn-number-input ></svn-number-input>
-        <!--        <svn-select-input el_id="selectinput" options='[{name:"volvo",value:"auto"}, {name:"saab",value:"auto"}, {name:"audi",value:"auto"}, ]'></svn-select-input>-->
+        <svn-label owner="numberinput">number input:</svn-label>
+        <svn-number-input el_id="numberinput" min="2" max="8"></svn-number-input>
+
+        <svn-label owner="selectinput">select input:</svn-label>
+        <svn-select-input el_id="selectinput" options='[{"name":"volvo"}, {"name":"saab","value":"auto"}, {"name":"audi","value":"auto"}]'></svn-select-input>
+
+        <svn-label owner="company">radio input:</svn-label>
+        <svn-radio-input options='[{"id":"samsung","value":"Samsung"},{"id":"apple","value":"Apple"},{"id":"microsoft","value":"Microsoft"}]' input-name="company"></svn-radio-input>
+
+        <svn-label owner="programminglanguages">programming languages:</svn-label>
+        <svn-checkbox-input el_id="programminglanguages" name="javascript"></svn-checkbox-input>
+        <svn-checkbox-input el_id="programminglanguages" name="php"></svn-checkbox-input>
+        <svn-checkbox-input el_id="programminglanguages" name="c#"></svn-checkbox-input>
+        <svn-checkbox-input el_id="programminglanguages" name="java"></svn-checkbox-input>
+
+        <svn-label owner=""></svn-label>
         <!--    <svn-text-input center value="tester@email.com" name="text" placeholder="test@example.org" disabled="true"></svn-text-input>-->
       </svn-form>
-
     </div>
   </div>
 </body>

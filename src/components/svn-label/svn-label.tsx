@@ -7,11 +7,10 @@ import {Component, h, Prop} from '@stencil/core';
 })
 export class SvnLabel {
   @Prop() owner: string;
-  @Prop() input: string;
 
   render() {
     return (
-        <label htmlFor={this.owner} class="block text-gray-500 text-sm font-bold mb-2">{this.input} <slot></slot></label>
+        <label htmlFor={this.owner} class="block text-gray-500 text-sm font-bold mb-2"><slot></slot></label>
     );
   }
 

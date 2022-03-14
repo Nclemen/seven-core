@@ -91,12 +91,21 @@ export class SvnTextarea {
    */
   @Prop() wrap: string;
 
+  /**
+   * attribute to enable or disable resize
+   */
+  @Prop() resize_disable: boolean = false;
+
 
 
   render() {
     return (
             <textarea
-              class="form-control resize-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              // class="form-control resize-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class={{
+                'resize-none' : this.resize_disable,
+                'form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none': true
+              }}
               id={this.el_id}
               rows={this.rows}
               cols={this.cols}

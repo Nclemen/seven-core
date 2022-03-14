@@ -42,20 +42,13 @@ export class SvnTextInput {
    */
   @Prop() autocomplete: boolean = false;
 
-  // @Prop({ mutable: true }) symbol: string = "$";
-  //
-  // changeSymbol(){
-  //   this.symbol == 'hello';
-  //   console.log(this);
-  // }
-
   render() {
     return (
       <Host>
         <input
           // class="text-center"
           id={this.el_id}
-          class="form-control shadow border-2 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+          class="form-control shadow border block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
           name={this.name}
           disabled={this.disabled}
           type="text"
