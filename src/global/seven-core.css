@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 /*body {*/
-  /*background-color: green;*/
+/*  @apply bg-purple-700*/
 /*}*/
+
+/*textcenter {*/
+/*  @apply shadow*/
+/*}*/
+
+/*input {*/
+/*  @apply rounded-md outline outline-1 outline-offset-0 focus:outline-red-500 shadow bg-purple-700*/
+/*}*/
+
 

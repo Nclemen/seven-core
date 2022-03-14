@@ -20,6 +20,98 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SvnCheckboxInput {
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        "name": string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options": any;
+        "value": string;
+    }
+    interface SvnFileInput {
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        /**
+          * set to true to turn on multiple file select
+         */
+        "multiple": boolean;
+    }
+    interface SvnForm {
+    }
+    interface SvnLabel {
+        "owner": string;
+    }
+    interface SvnNumberInput {
+        /**
+          * prop to determine whether or not the autocomplete is turned on for the input field
+         */
+        "autocomplete": boolean;
+        /**
+          * prop to determine whether or not the input field is disabled or not
+         */
+        "disabled": boolean;
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        /**
+          * a list of possible options that can be chosen from
+         */
+        "list": any;
+        /**
+          * the maximum number of the input field
+         */
+        "max": number;
+        /**
+          * the minimal number of the input field
+         */
+        "min": number;
+        /**
+          * the name of the number input element
+         */
+        "name": string;
+        /**
+          * the placeholder for the number input
+         */
+        "placeholder": string;
+        /**
+          * prop to determine whether or not the input field is readonly or not
+         */
+        "readonly": boolean;
+        /**
+          * the number step size which is allowed
+         */
+        "step": number;
+        /**
+          * the value of the input field
+         */
+        "value": string;
+    }
+    interface SvnRadioInput {
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        "inputName": string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options": any;
+    }
+    interface SvnSelectInput {
+        /**
+          * the id of component
+         */
+        "el_id": string;
+        "multiple": boolean;
+        "options": any;
+    }
     interface SvnTextInput {
         /**
           * prop to determine whether or not the autocomplete is turned on for the input field
@@ -34,6 +126,10 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * the id of the component element
+         */
+        "el_id": string;
+        /**
           * the name of the element
          */
         "name": string;
@@ -42,13 +138,79 @@ export namespace Components {
          */
         "placeholder": string;
         /**
-          * prop to determine which type of text input field is used
-         */
-        "type": string;
-        /**
           * the value of the input field
          */
         "value": string;
+    }
+    interface SvnTextarea {
+        /**
+          * turn on automatic capitalization
+         */
+        "autocapitalize": string;
+        /**
+          * set to on to turn on autocorrect(is turned off by default)
+         */
+        "autocorrect": string;
+        /**
+          * the columns for the text area element
+         */
+        "cols": number;
+        /**
+          * set to true to disable input for textarea (default = false)
+         */
+        "disabled": boolean;
+        /**
+          * the id of the text area
+         */
+        "el_id": string;
+        /**
+          * set to true to automatically focus on the text area when page is loaded (disabled by default)
+         */
+        "focusTarget": boolean;
+        /**
+          * the form which the text area belongs to
+         */
+        "form": string;
+        /**
+          * the maximum amount of characters for textarea
+         */
+        "maxlength": number;
+        /**
+          * the mininmal amount of character for textarea
+         */
+        "minlength": number;
+        /**
+          * the name attribute for textarea
+         */
+        "name": string;
+        /**
+          * a placeholder for the textarea
+         */
+        "placeholder": string;
+        /**
+          * set to true to turn on read only (this does not prevent the users from clicking or selecting in the control)
+         */
+        "readonly": string;
+        /**
+          * set to true if text area is a required field in forms
+         */
+        "required": boolean;
+        /**
+          * attribute to enable or disable resize
+         */
+        "resize_disable": boolean;
+        /**
+          * the row for the textarea element
+         */
+        "rows": number;
+        /**
+          * set to true to turn on spellcheck, to false to turn off spellcheck and default to use the default setting for spellcheck
+         */
+        "spell": any;
+        /**
+          * set to hard, soft or off
+         */
+        "wrap": string;
     }
 }
 declare global {
@@ -58,15 +220,71 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSvnCheckboxInputElement extends Components.SvnCheckboxInput, HTMLStencilElement {
+    }
+    var HTMLSvnCheckboxInputElement: {
+        prototype: HTMLSvnCheckboxInputElement;
+        new (): HTMLSvnCheckboxInputElement;
+    };
+    interface HTMLSvnFileInputElement extends Components.SvnFileInput, HTMLStencilElement {
+    }
+    var HTMLSvnFileInputElement: {
+        prototype: HTMLSvnFileInputElement;
+        new (): HTMLSvnFileInputElement;
+    };
+    interface HTMLSvnFormElement extends Components.SvnForm, HTMLStencilElement {
+    }
+    var HTMLSvnFormElement: {
+        prototype: HTMLSvnFormElement;
+        new (): HTMLSvnFormElement;
+    };
+    interface HTMLSvnLabelElement extends Components.SvnLabel, HTMLStencilElement {
+    }
+    var HTMLSvnLabelElement: {
+        prototype: HTMLSvnLabelElement;
+        new (): HTMLSvnLabelElement;
+    };
+    interface HTMLSvnNumberInputElement extends Components.SvnNumberInput, HTMLStencilElement {
+    }
+    var HTMLSvnNumberInputElement: {
+        prototype: HTMLSvnNumberInputElement;
+        new (): HTMLSvnNumberInputElement;
+    };
+    interface HTMLSvnRadioInputElement extends Components.SvnRadioInput, HTMLStencilElement {
+    }
+    var HTMLSvnRadioInputElement: {
+        prototype: HTMLSvnRadioInputElement;
+        new (): HTMLSvnRadioInputElement;
+    };
+    interface HTMLSvnSelectInputElement extends Components.SvnSelectInput, HTMLStencilElement {
+    }
+    var HTMLSvnSelectInputElement: {
+        prototype: HTMLSvnSelectInputElement;
+        new (): HTMLSvnSelectInputElement;
+    };
     interface HTMLSvnTextInputElement extends Components.SvnTextInput, HTMLStencilElement {
     }
     var HTMLSvnTextInputElement: {
         prototype: HTMLSvnTextInputElement;
         new (): HTMLSvnTextInputElement;
     };
+    interface HTMLSvnTextareaElement extends Components.SvnTextarea, HTMLStencilElement {
+    }
+    var HTMLSvnTextareaElement: {
+        prototype: HTMLSvnTextareaElement;
+        new (): HTMLSvnTextareaElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "svn-checkbox-input": HTMLSvnCheckboxInputElement;
+        "svn-file-input": HTMLSvnFileInputElement;
+        "svn-form": HTMLSvnFormElement;
+        "svn-label": HTMLSvnLabelElement;
+        "svn-number-input": HTMLSvnNumberInputElement;
+        "svn-radio-input": HTMLSvnRadioInputElement;
+        "svn-select-input": HTMLSvnSelectInputElement;
         "svn-text-input": HTMLSvnTextInputElement;
+        "svn-textarea": HTMLSvnTextareaElement;
     }
 }
 declare namespace LocalJSX {
@@ -84,6 +302,98 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SvnCheckboxInput {
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        "name"?: string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options"?: any;
+        "value"?: string;
+    }
+    interface SvnFileInput {
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        /**
+          * set to true to turn on multiple file select
+         */
+        "multiple"?: boolean;
+    }
+    interface SvnForm {
+    }
+    interface SvnLabel {
+        "owner"?: string;
+    }
+    interface SvnNumberInput {
+        /**
+          * prop to determine whether or not the autocomplete is turned on for the input field
+         */
+        "autocomplete"?: boolean;
+        /**
+          * prop to determine whether or not the input field is disabled or not
+         */
+        "disabled"?: boolean;
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        /**
+          * a list of possible options that can be chosen from
+         */
+        "list"?: any;
+        /**
+          * the maximum number of the input field
+         */
+        "max"?: number;
+        /**
+          * the minimal number of the input field
+         */
+        "min"?: number;
+        /**
+          * the name of the number input element
+         */
+        "name"?: string;
+        /**
+          * the placeholder for the number input
+         */
+        "placeholder"?: string;
+        /**
+          * prop to determine whether or not the input field is readonly or not
+         */
+        "readonly"?: boolean;
+        /**
+          * the number step size which is allowed
+         */
+        "step"?: number;
+        /**
+          * the value of the input field
+         */
+        "value"?: string;
+    }
+    interface SvnRadioInput {
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        "inputName"?: string;
+        /**
+          * an array containing information for the radio options  every option object contains a name, id and value
+         */
+        "options"?: any;
+    }
+    interface SvnSelectInput {
+        /**
+          * the id of component
+         */
+        "el_id"?: string;
+        "multiple"?: boolean;
+        "options"?: any;
+    }
     interface SvnTextInput {
         /**
           * prop to determine whether or not the autocomplete is turned on for the input field
@@ -98,6 +408,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * the id of the component element
+         */
+        "el_id"?: string;
+        /**
           * the name of the element
          */
         "name"?: string;
@@ -106,17 +420,91 @@ declare namespace LocalJSX {
          */
         "placeholder"?: string;
         /**
-          * prop to determine which type of text input field is used
-         */
-        "type"?: string;
-        /**
           * the value of the input field
          */
         "value"?: string;
     }
+    interface SvnTextarea {
+        /**
+          * turn on automatic capitalization
+         */
+        "autocapitalize"?: string;
+        /**
+          * set to on to turn on autocorrect(is turned off by default)
+         */
+        "autocorrect"?: string;
+        /**
+          * the columns for the text area element
+         */
+        "cols"?: number;
+        /**
+          * set to true to disable input for textarea (default = false)
+         */
+        "disabled"?: boolean;
+        /**
+          * the id of the text area
+         */
+        "el_id"?: string;
+        /**
+          * set to true to automatically focus on the text area when page is loaded (disabled by default)
+         */
+        "focusTarget"?: boolean;
+        /**
+          * the form which the text area belongs to
+         */
+        "form"?: string;
+        /**
+          * the maximum amount of characters for textarea
+         */
+        "maxlength"?: number;
+        /**
+          * the mininmal amount of character for textarea
+         */
+        "minlength"?: number;
+        /**
+          * the name attribute for textarea
+         */
+        "name"?: string;
+        /**
+          * a placeholder for the textarea
+         */
+        "placeholder"?: string;
+        /**
+          * set to true to turn on read only (this does not prevent the users from clicking or selecting in the control)
+         */
+        "readonly"?: string;
+        /**
+          * set to true if text area is a required field in forms
+         */
+        "required"?: boolean;
+        /**
+          * attribute to enable or disable resize
+         */
+        "resize_disable"?: boolean;
+        /**
+          * the row for the textarea element
+         */
+        "rows"?: number;
+        /**
+          * set to true to turn on spellcheck, to false to turn off spellcheck and default to use the default setting for spellcheck
+         */
+        "spell"?: any;
+        /**
+          * set to hard, soft or off
+         */
+        "wrap"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "svn-checkbox-input": SvnCheckboxInput;
+        "svn-file-input": SvnFileInput;
+        "svn-form": SvnForm;
+        "svn-label": SvnLabel;
+        "svn-number-input": SvnNumberInput;
+        "svn-radio-input": SvnRadioInput;
+        "svn-select-input": SvnSelectInput;
         "svn-text-input": SvnTextInput;
+        "svn-textarea": SvnTextarea;
     }
 }
 export { LocalJSX as JSX };
@@ -124,7 +512,15 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "svn-checkbox-input": LocalJSX.SvnCheckboxInput & JSXBase.HTMLAttributes<HTMLSvnCheckboxInputElement>;
+            "svn-file-input": LocalJSX.SvnFileInput & JSXBase.HTMLAttributes<HTMLSvnFileInputElement>;
+            "svn-form": LocalJSX.SvnForm & JSXBase.HTMLAttributes<HTMLSvnFormElement>;
+            "svn-label": LocalJSX.SvnLabel & JSXBase.HTMLAttributes<HTMLSvnLabelElement>;
+            "svn-number-input": LocalJSX.SvnNumberInput & JSXBase.HTMLAttributes<HTMLSvnNumberInputElement>;
+            "svn-radio-input": LocalJSX.SvnRadioInput & JSXBase.HTMLAttributes<HTMLSvnRadioInputElement>;
+            "svn-select-input": LocalJSX.SvnSelectInput & JSXBase.HTMLAttributes<HTMLSvnSelectInputElement>;
             "svn-text-input": LocalJSX.SvnTextInput & JSXBase.HTMLAttributes<HTMLSvnTextInputElement>;
+            "svn-textarea": LocalJSX.SvnTextarea & JSXBase.HTMLAttributes<HTMLSvnTextareaElement>;
         }
     }
 }

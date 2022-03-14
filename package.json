@@ -1,6 +1,6 @@
 {
-  "name": "seven-core",
-  "version": "0.0.1",
+  "name": "@nclemen/seven-core",
+  "version": "0.0.2",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -12,7 +12,7 @@
   "unpkg": "dist/seven-core/seven-core.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/Nclemen/seven-core.git"
   },
   "files": [
     "dist/",
@@ -26,9 +26,12 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
     "@stencil/core": "^2.13.0",
     "@stencil/postcss": "^2.1.0",
     "autoprefixer": "^10.4.2",
+    "cssnano": "^5.1.1",
+    "postcss-replace": "^2.0.0",
     "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
@@ -37,5 +40,13 @@
     "jest-cli": "^27.4.5",
     "puppeteer": "^13.4.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nclemen/seven-core/issues"
+  },
+  "homepage": "https://github.com/Nclemen/seven-core#readme",
+  "keywords": [
+    "seven-core"
+  ],
+  "author": "Nclemen"
 }
