@@ -3,28 +3,22 @@ import {Component, h, Prop} from '@stencil/core';
 @Component({
   tag: 'svn-textarea',
   styleUrl: 'svn-textarea.css',
-  shadow: true,
 })
 export class SvnTextarea {
   /**
-   * the id of the text area
+   * the id of the textarea
    */
-  @Prop() el_id: string;
+  @Prop() elId!: string;
 
   /**
    * the row for the textarea element
    */
-  @Prop() rows: number;
+  @Prop() rows: number = 5;
 
   /**
    * the columns for the text area element
    */
   @Prop() cols: number;
-
-  // /**
-  //  * the name of the label which is being bound to textarea
-  //  */
-  // @Prop() lblname: string;
 
   /**
    * a placeholder for the textarea
@@ -94,37 +88,37 @@ export class SvnTextarea {
   /**
    * attribute to enable or disable resize
    */
-  @Prop() resize_disable: boolean = false;
-
-
+  @Prop() resizeDisable: boolean = false;
 
   render() {
     return (
-            <textarea
-              // class="form-control resize-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              class={{
-                'resize-none' : this.resize_disable,
-                'form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none': true
-              }}
-              id={this.el_id}
-              rows={this.rows}
-              cols={this.cols}
-              placeholder={this.placeholder}
-              maxlength={this.maxlength}
-              minlength={this.minlength}
-              form={this.form}
-              disabled={this.disabled}
-              name={this.name}
-              autocorrect={this.autocorrect}
-              autofocus={this.focusTarget}
-              autocapitalize={this.autocapitalize}
-              readonly={this.readonly}
-              required={this.required}
-              spellcheck={this.spell}
-              wrap={this.wrap}
-            >
-              <slot></slot>
-            </textarea>
+            <svn-label owner={this.elId}>
+              <textarea
+                // class="form-control resize-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class={{
+                  'resize-none' : this.resizeDisable,
+                  'form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none': true
+                }}
+                id={this.elId}
+                rows={this.rows}
+                cols={this.cols}
+                placeholder={this.placeholder}
+                maxlength={this.maxlength}
+                minlength={this.minlength}
+                form={this.form}
+                disabled={this.disabled}
+                name={this.name}
+                autocorrect={this.autocorrect}
+                autofocus={this.focusTarget}
+                autocapitalize={this.autocapitalize}
+                readonly={this.readonly}
+                required={this.required}
+                spellcheck={this.spell}
+                wrap={this.wrap}
+              >
+                <slot></slot>
+              </textarea>
+            </svn-label>
     );
   }
 

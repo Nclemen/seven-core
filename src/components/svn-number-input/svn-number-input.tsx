@@ -3,24 +3,23 @@ import {Component, h, Prop} from '@stencil/core';
 @Component({
   tag: 'svn-number-input',
   styleUrl: 'svn-number-input.css',
-  shadow: true,
 })
 export class SvnNumberInput {
 
   /**
-   * the id of component
+   * the id of the number input
    */
-  @Prop() el_id: string;
+  @Prop() elId!: string;
 
   /**
    * the name of the number input element
    */
-  @Prop() name:string = "";
+  @Prop() name:string;
 
   /**
    * the placeholder for the number input
    */
-  @Prop() placeholder: string = "";
+  @Prop() placeholder: string;
 
 
   /**
@@ -36,7 +35,7 @@ export class SvnNumberInput {
   /**
    * the value of the input field
    */
-  @Prop() value: string = "";
+  @Prop() value: string;
 
   /**
    * the minimal number of the input field
@@ -51,7 +50,7 @@ export class SvnNumberInput {
   /**
    * a list of possible options that can be chosen from
    */
-  @Prop() list;
+  @Prop() list: any;
 
   /**
    * the number step size which is allowed
@@ -66,7 +65,7 @@ export class SvnNumberInput {
   render() {
     return (
         <input class="form-control block w-full rounded shadow border focus:border-none border-gray-300"
-               id={this.el_id}
+               id={this.elId}
                type="number"
                disabled={this.disabled}
                name={this.name}

@@ -24,28 +24,53 @@ export namespace Components {
         /**
           * the id of component
          */
-        "el_id": string;
+        "elId": string;
+        /**
+          * the name of the input element
+         */
         "name": string;
         /**
-          * an array containing information for the radio options  every option object contains a name, id and value
+          * the value of the input element
          */
-        "options": any;
         "value": string;
     }
     interface SvnFileInput {
         /**
-          * the id of component
+          * the id of the component element
          */
-        "el_id": string;
+        "elId": string;
+        /**
+          * the type of file that can be uploaded
+         */
+        "fileType": string;
+        /**
+          * the text for the label
+         */
+        "lblText": string;
         /**
           * set to true to turn on multiple file select
          */
         "multiple": boolean;
     }
     interface SvnForm {
+        /**
+          * the id of the form
+         */
+        "elId": string;
+        /**
+          * the name of the form
+         */
+        "name": string;
     }
     interface SvnLabel {
+        /**
+          * the id of the element that the label belongs to
+         */
         "owner": string;
+        /**
+          * the text displayed by the label
+         */
+        "text": string;
     }
     interface SvnNumberInput {
         /**
@@ -57,9 +82,9 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * the id of component
+          * the id of the number input
          */
-        "el_id": string;
+        "elId": string;
         /**
           * a list of possible options that can be chosen from
          */
@@ -97,7 +122,10 @@ export namespace Components {
         /**
           * the id of component
          */
-        "el_id": string;
+        "elId": string;
+        /**
+          * the name for the input
+         */
         "inputName": string;
         /**
           * an array containing information for the radio options  every option object contains a name, id and value
@@ -108,8 +136,14 @@ export namespace Components {
         /**
           * the id of component
          */
-        "el_id": string;
+        "elId": string;
+        /**
+          * value to turn multiple file select on or off
+         */
         "multiple": boolean;
+        /**
+          * an array of options for the select element with name and value
+         */
         "options": any;
     }
     interface SvnTextInput {
@@ -128,7 +162,11 @@ export namespace Components {
         /**
           * the id of the component element
          */
-        "el_id": string;
+        "elId": string;
+        /**
+          * the text for the label
+         */
+        "lblText": string;
         /**
           * the name of the element
          */
@@ -160,9 +198,9 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * the id of the text area
+          * the id of the textarea
          */
-        "el_id": string;
+        "elId": string;
         /**
           * set to true to automatically focus on the text area when page is loaded (disabled by default)
          */
@@ -198,7 +236,7 @@ export namespace Components {
         /**
           * attribute to enable or disable resize
          */
-        "resize_disable": boolean;
+        "resizeDisable": boolean;
         /**
           * the row for the textarea element
          */
@@ -306,28 +344,53 @@ declare namespace LocalJSX {
         /**
           * the id of component
          */
-        "el_id"?: string;
+        "elId": string;
+        /**
+          * the name of the input element
+         */
         "name"?: string;
         /**
-          * an array containing information for the radio options  every option object contains a name, id and value
+          * the value of the input element
          */
-        "options"?: any;
         "value"?: string;
     }
     interface SvnFileInput {
         /**
-          * the id of component
+          * the id of the component element
          */
-        "el_id"?: string;
+        "elId": string;
+        /**
+          * the type of file that can be uploaded
+         */
+        "fileType": string;
+        /**
+          * the text for the label
+         */
+        "lblText"?: string;
         /**
           * set to true to turn on multiple file select
          */
         "multiple"?: boolean;
     }
     interface SvnForm {
+        /**
+          * the id of the form
+         */
+        "elId": string;
+        /**
+          * the name of the form
+         */
+        "name"?: string;
     }
     interface SvnLabel {
-        "owner"?: string;
+        /**
+          * the id of the element that the label belongs to
+         */
+        "owner": string;
+        /**
+          * the text displayed by the label
+         */
+        "text"?: string;
     }
     interface SvnNumberInput {
         /**
@@ -339,9 +402,9 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * the id of component
+          * the id of the number input
          */
-        "el_id"?: string;
+        "elId": string;
         /**
           * a list of possible options that can be chosen from
          */
@@ -379,7 +442,10 @@ declare namespace LocalJSX {
         /**
           * the id of component
          */
-        "el_id"?: string;
+        "elId"?: string;
+        /**
+          * the name for the input
+         */
         "inputName"?: string;
         /**
           * an array containing information for the radio options  every option object contains a name, id and value
@@ -390,8 +456,14 @@ declare namespace LocalJSX {
         /**
           * the id of component
          */
-        "el_id"?: string;
+        "elId": string;
+        /**
+          * value to turn multiple file select on or off
+         */
         "multiple"?: boolean;
+        /**
+          * an array of options for the select element with name and value
+         */
         "options"?: any;
     }
     interface SvnTextInput {
@@ -410,11 +482,15 @@ declare namespace LocalJSX {
         /**
           * the id of the component element
          */
-        "el_id"?: string;
+        "elId": string;
+        /**
+          * the text for the label
+         */
+        "lblText"?: string;
         /**
           * the name of the element
          */
-        "name"?: string;
+        "name": string;
         /**
           * the placeholder for the text input
          */
@@ -442,9 +518,9 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * the id of the text area
+          * the id of the textarea
          */
-        "el_id"?: string;
+        "elId": string;
         /**
           * set to true to automatically focus on the text area when page is loaded (disabled by default)
          */
@@ -480,7 +556,7 @@ declare namespace LocalJSX {
         /**
           * attribute to enable or disable resize
          */
-        "resize_disable"?: boolean;
+        "resizeDisable"?: boolean;
         /**
           * the row for the textarea element
          */
