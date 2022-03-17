@@ -7,12 +7,12 @@ import {Component, Host, Prop, h} from '@stencil/core';
 export class SvnTextInput {
 
   /**
-   * the id of the component element
+   * the id of the input element
    */
   @Prop() elId!: string;
 
   /**
-   * the name of the element
+   * the name attribute of the element
    */
   @Prop() name!: string;
 

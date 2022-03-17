@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `name`   | `name`    |             | `string` | `undefined` |
-| `owner`  | `owner`   |             | `string` | `undefined` |
+| Property             | Attribute | Description                                     | Type     | Default     |
+| -------------------- | --------- | ----------------------------------------------- | -------- | ----------- |
+| `owner` _(required)_ | `owner`   | the id of the element that the label belongs to | `string` | `undefined` |
+| `text`               | `text`    | the text displayed by the label                 | `string` | `undefined` |
 
 
 ## Dependencies
@@ -19,12 +19,14 @@
 
  - [svn-file-input](../svn-file-input)
  - [svn-text-input](../svn-text-input)
+ - [svn-textarea](../svn-textarea)
 
 ### Graph
 ```mermaid
 graph TD;
   svn-file-input --> svn-label
   svn-text-input --> svn-label
+  svn-textarea --> svn-label
   style svn-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

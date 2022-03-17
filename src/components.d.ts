@@ -160,7 +160,7 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
-          * the id of the component element
+          * the id of the input element
          */
         "elId": string;
         /**
@@ -168,7 +168,7 @@ export namespace Components {
          */
         "lblText": string;
         /**
-          * the name of the element
+          * the name attribute of the element
          */
         "name": string;
         /**
@@ -480,7 +480,7 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * the id of the component element
+          * the id of the input element
          */
         "elId": string;
         /**
@@ -488,7 +488,7 @@ declare namespace LocalJSX {
          */
         "lblText"?: string;
         /**
-          * the name of the element
+          * the name attribute of the element
          */
         "name": string;
         /**

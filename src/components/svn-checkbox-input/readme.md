@@ -7,12 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description                                                                                              | Type     | Default     |
-| --------- | --------- | -------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| `el_id`   | `el_id`   | the id of component                                                                                      | `string` | `undefined` |
-| `name`    | `name`    |                                                                                                          | `string` | `undefined` |
-| `options` | `options` | an array containing information for the radio options  every option object contains a name, id and value | `any`    | `undefined` |
-| `value`   | `value`   |                                                                                                          | `string` | `undefined` |
+| Property            | Attribute | Description                    | Type     | Default     |
+| ------------------- | --------- | ------------------------------ | -------- | ----------- |
+| `elId` _(required)_ | `el-id`   | the id of component            | `string` | `undefined` |
+| `name`              | `name`    | the name of the input element  | `string` | `undefined` |
+| `value`             | `value`   | the value of the input element | `string` | `undefined` |
 
 
 ----------------------------------------------
