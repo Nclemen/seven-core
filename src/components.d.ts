@@ -22,6 +22,10 @@ export namespace Components {
     }
     interface SvnCheckboxInput {
         /**
+          * used to set the checkbox to checked or not
+         */
+        "checked": boolean;
+        /**
           * the id of component
          */
         "elId": string;
@@ -33,6 +37,8 @@ export namespace Components {
           * the value of the input element
          */
         "value": string;
+    }
+    interface SvnChip {
     }
     interface SvnFileInput {
         /**
@@ -71,6 +77,24 @@ export namespace Components {
           * the text displayed by the label
          */
         "text": string;
+    }
+    interface SvnMultiSelect {
+        /**
+          * the id of component
+         */
+        "elId": string;
+        /**
+          * value to turn multiple file select on or off
+         */
+        "multiple": boolean;
+        /**
+          * the name attribute for the select element
+         */
+        "name": string;
+        /**
+          * an array of options for the select element with name and value
+         */
+        "options": any;
     }
     interface SvnNumberInput {
         /**
@@ -141,6 +165,10 @@ export namespace Components {
           * value to turn multiple file select on or off
          */
         "multiple": boolean;
+        /**
+          * the name attribute for the select element
+         */
+        "name": string;
         /**
           * an array of options for the select element with name and value
          */
@@ -264,6 +292,12 @@ declare global {
         prototype: HTMLSvnCheckboxInputElement;
         new (): HTMLSvnCheckboxInputElement;
     };
+    interface HTMLSvnChipElement extends Components.SvnChip, HTMLStencilElement {
+    }
+    var HTMLSvnChipElement: {
+        prototype: HTMLSvnChipElement;
+        new (): HTMLSvnChipElement;
+    };
     interface HTMLSvnFileInputElement extends Components.SvnFileInput, HTMLStencilElement {
     }
     var HTMLSvnFileInputElement: {
@@ -281,6 +315,12 @@ declare global {
     var HTMLSvnLabelElement: {
         prototype: HTMLSvnLabelElement;
         new (): HTMLSvnLabelElement;
+    };
+    interface HTMLSvnMultiSelectElement extends Components.SvnMultiSelect, HTMLStencilElement {
+    }
+    var HTMLSvnMultiSelectElement: {
+        prototype: HTMLSvnMultiSelectElement;
+        new (): HTMLSvnMultiSelectElement;
     };
     interface HTMLSvnNumberInputElement extends Components.SvnNumberInput, HTMLStencilElement {
     }
@@ -315,9 +355,11 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "svn-checkbox-input": HTMLSvnCheckboxInputElement;
+        "svn-chip": HTMLSvnChipElement;
         "svn-file-input": HTMLSvnFileInputElement;
         "svn-form": HTMLSvnFormElement;
         "svn-label": HTMLSvnLabelElement;
+        "svn-multi-select": HTMLSvnMultiSelectElement;
         "svn-number-input": HTMLSvnNumberInputElement;
         "svn-radio-input": HTMLSvnRadioInputElement;
         "svn-select-input": HTMLSvnSelectInputElement;
@@ -342,6 +384,10 @@ declare namespace LocalJSX {
     }
     interface SvnCheckboxInput {
         /**
+          * used to set the checkbox to checked or not
+         */
+        "checked"?: boolean;
+        /**
           * the id of component
          */
         "elId": string;
@@ -353,6 +399,8 @@ declare namespace LocalJSX {
           * the value of the input element
          */
         "value"?: string;
+    }
+    interface SvnChip {
     }
     interface SvnFileInput {
         /**
@@ -391,6 +439,24 @@ declare namespace LocalJSX {
           * the text displayed by the label
          */
         "text"?: string;
+    }
+    interface SvnMultiSelect {
+        /**
+          * the id of component
+         */
+        "elId": string;
+        /**
+          * value to turn multiple file select on or off
+         */
+        "multiple"?: boolean;
+        /**
+          * the name attribute for the select element
+         */
+        "name"?: string;
+        /**
+          * an array of options for the select element with name and value
+         */
+        "options"?: any;
     }
     interface SvnNumberInput {
         /**
@@ -461,6 +527,10 @@ declare namespace LocalJSX {
           * value to turn multiple file select on or off
          */
         "multiple"?: boolean;
+        /**
+          * the name attribute for the select element
+         */
+        "name"?: string;
         /**
           * an array of options for the select element with name and value
          */
@@ -573,9 +643,11 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "my-component": MyComponent;
         "svn-checkbox-input": SvnCheckboxInput;
+        "svn-chip": SvnChip;
         "svn-file-input": SvnFileInput;
         "svn-form": SvnForm;
         "svn-label": SvnLabel;
+        "svn-multi-select": SvnMultiSelect;
         "svn-number-input": SvnNumberInput;
         "svn-radio-input": SvnRadioInput;
         "svn-select-input": SvnSelectInput;
@@ -589,9 +661,11 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "svn-checkbox-input": LocalJSX.SvnCheckboxInput & JSXBase.HTMLAttributes<HTMLSvnCheckboxInputElement>;
+            "svn-chip": LocalJSX.SvnChip & JSXBase.HTMLAttributes<HTMLSvnChipElement>;
             "svn-file-input": LocalJSX.SvnFileInput & JSXBase.HTMLAttributes<HTMLSvnFileInputElement>;
             "svn-form": LocalJSX.SvnForm & JSXBase.HTMLAttributes<HTMLSvnFormElement>;
             "svn-label": LocalJSX.SvnLabel & JSXBase.HTMLAttributes<HTMLSvnLabelElement>;
+            "svn-multi-select": LocalJSX.SvnMultiSelect & JSXBase.HTMLAttributes<HTMLSvnMultiSelectElement>;
             "svn-number-input": LocalJSX.SvnNumberInput & JSXBase.HTMLAttributes<HTMLSvnNumberInputElement>;
             "svn-radio-input": LocalJSX.SvnRadioInput & JSXBase.HTMLAttributes<HTMLSvnRadioInputElement>;
             "svn-select-input": LocalJSX.SvnSelectInput & JSXBase.HTMLAttributes<HTMLSvnSelectInputElement>;

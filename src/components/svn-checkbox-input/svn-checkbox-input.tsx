@@ -21,6 +21,13 @@ export class SvnCheckboxInput {
    */
   @Prop() value: string;
 
+  /**
+   * used to set the checkbox to checked or not
+   */
+  @Prop() checked: boolean = false;
+
+
+
 
   render() {
     return (
