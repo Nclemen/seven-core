@@ -30,7 +30,7 @@ export const config: Config = {
     },
     {
       type: 'docs-readme',
-      dir: '/Users/narisonclemencia/projects/seven-core docs/seven-core-docs/docs',
+      dir: '/Users/narisonclemencia/projects/seven-core-docs/docs',
       strict: true
     },
     {
