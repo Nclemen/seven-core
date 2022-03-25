@@ -1,6 +1,20 @@
-# svn-textarea
+---
+id: svn-textarea
+title: textarea
+---
+
+## Component example
+
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
 
+```html
+<svn-textarea el-id="texttwo" resizeDisable="true" minlength="2" maxlength="10" placeholder="enter your message..."></svn-textarea>
+```
+
+the code example above will result into this:
+
+<svn-textarea el-id="texttwo" resizeDisable="true" minlength="2" maxlength="10" placeholder="enter your message..."></svn-textarea>
 
 <!-- Auto Generated Below -->
 

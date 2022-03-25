@@ -1,6 +1,20 @@
-# svn-file-input
+---
+id: svn-file-input
+title: file input
+---
+
+## Component example
+
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
 
+```html
+<svn-file-input multiple el-id="fileinput" file-type="image"></svn-file-input>
+```
+
+the code example above will result into this:
+
+<svn-file-input multiple el-id="fileinput" file-type="image"></svn-file-input>
 
 <!-- Auto Generated Below -->
 

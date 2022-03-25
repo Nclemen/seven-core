@@ -26,6 +26,12 @@ export const config: Config = {
       type: 'dist-custom-elements',
     },
     {
+      type: 'docs-custom',
+      generator: (docs: JsonDocs) => {
+        // Custom logic goes here
+      }
+    },
+    {
       type: 'docs-readme',
     },
     {

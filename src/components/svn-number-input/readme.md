@@ -1,6 +1,20 @@
-# svn-number-input
+---
+id: svn-number-input
+title: number input
+---
+
+## Component example
+
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
 
+```html
+<svn-number-input el-id="numberinput" min="2" max="8"></svn-number-input>
+```
+
+the code example above will result into this:
+
+<svn-number-input el-id="numberinput" min="2" max="8"></svn-number-input>
 
 <!-- Auto Generated Below -->
 

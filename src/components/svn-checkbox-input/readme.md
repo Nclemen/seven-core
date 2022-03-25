@@ -1,6 +1,26 @@
-# svn-checkbox-input
+---
+id: svn-checkbox-input
+title: checkbox input
+---
+
+## Component example
+
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
 
+```html
+<svn-checkbox-input el-id="programminglanguages" name="javascript"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="php"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="c#"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="java"></svn-checkbox-input>
+```
+
+the code example above will result into this:
+
+<svn-checkbox-input el-id="programminglanguages" name="javascript"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="php"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="c#"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="java"></svn-checkbox-input>
 
 <!-- Auto Generated Below -->
 

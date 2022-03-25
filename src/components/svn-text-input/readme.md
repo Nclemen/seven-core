@@ -1,6 +1,20 @@
-# svn-text-input
+---
+id: svn-text-input
+title: text input
+---
+
+## Component example
+
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
 
+```html
+<svn-text-input></svn-text-input>
+```
+
+the code example above will result into this:
+
+<svn-text-input></svn-text-input>
 
 <!-- Auto Generated Below -->
 

@@ -20,6 +20,20 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SvnAlert {
+        /**
+          * the id of the alert component
+         */
+        "elId": string;
+        /**
+          * the message inside the alert
+         */
+        "msg": string;
+        /**
+          * the type of alert shown (info,danger,caution)
+         */
+        "type": string;
+    }
     interface SvnCheckboxInput {
         /**
           * used to set the checkbox to checked or not
@@ -286,6 +300,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSvnAlertElement extends Components.SvnAlert, HTMLStencilElement {
+    }
+    var HTMLSvnAlertElement: {
+        prototype: HTMLSvnAlertElement;
+        new (): HTMLSvnAlertElement;
+    };
     interface HTMLSvnCheckboxInputElement extends Components.SvnCheckboxInput, HTMLStencilElement {
     }
     var HTMLSvnCheckboxInputElement: {
@@ -354,6 +374,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "svn-alert": HTMLSvnAlertElement;
         "svn-checkbox-input": HTMLSvnCheckboxInputElement;
         "svn-chip": HTMLSvnChipElement;
         "svn-file-input": HTMLSvnFileInputElement;
@@ -381,6 +402,20 @@ declare namespace LocalJSX {
           * The middle name
          */
         "middle"?: string;
+    }
+    interface SvnAlert {
+        /**
+          * the id of the alert component
+         */
+        "elId"?: string;
+        /**
+          * the message inside the alert
+         */
+        "msg"?: string;
+        /**
+          * the type of alert shown (info,danger,caution)
+         */
+        "type"?: string;
     }
     interface SvnCheckboxInput {
         /**
@@ -642,6 +677,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "svn-alert": SvnAlert;
         "svn-checkbox-input": SvnCheckboxInput;
         "svn-chip": SvnChip;
         "svn-file-input": SvnFileInput;
@@ -660,6 +696,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "svn-alert": LocalJSX.SvnAlert & JSXBase.HTMLAttributes<HTMLSvnAlertElement>;
             "svn-checkbox-input": LocalJSX.SvnCheckboxInput & JSXBase.HTMLAttributes<HTMLSvnCheckboxInputElement>;
             "svn-chip": LocalJSX.SvnChip & JSXBase.HTMLAttributes<HTMLSvnChipElement>;
             "svn-file-input": LocalJSX.SvnFileInput & JSXBase.HTMLAttributes<HTMLSvnFileInputElement>;

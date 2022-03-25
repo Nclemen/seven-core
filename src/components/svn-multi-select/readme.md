@@ -1,6 +1,29 @@
-# svn-multi-select
+---
+id: svn-multi-select
+title: multi select
+---
 
+## Component example
 
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
+
+```html
+<svn-multi-select 
+  options='[
+  {"name":"volvo"},
+  {"name":"cheetos"},
+  {"name":"lays"},
+  {"name":"bill"},
+  {"name":"cypher"},
+  {"name":"saab","value":"auto s"},
+  {"name":"audi","value":"auto"}
+  ]'
+></svn-multi-select>
+```
+
+the code example above will result into this:
+
+<svn-multi-select options='[{"name":"volvo"},{"name":"cheetos"},{"name":"lays"},{"name":"bill"},{"name":"cypher"}, {"name":"saab","value":"auto s"}, {"name":"audi","value":"auto"}]'></svn-multi-select>
 
 <!-- Auto Generated Below -->
 

@@ -54,6 +54,10 @@ export class SvnMultiSelect {
     this.arrayDataWatcher(this.options);
   }
 
+  componentDidLoad(){
+    console.log(this.selected);
+  }
+
   toggleList(e){
     console.log('toggeling list')
     if(e.target == e.currentTarget){
@@ -63,30 +67,42 @@ export class SvnMultiSelect {
 
   toggleOption(option){
     let id =option.name + "-" + option.value;
+    console.log('toggled');
 
     if (document.getElementById(id) != null && document.getElementById(id).hasAttribute('hidden')){
       console.log('removing hidden attribute');
       document.getElementById(id).removeAttribute('hidden');
+      if (document.getElementById(id).hasAttribute('hidden')) {
+        console.log('failed')
+      } else {
+        console.log('succeeded')
+      }
+
     } else if (document.getElementById(id) != null) {
       console.log('adding hidden attribute')
       document.getElementById(id).setAttribute('hidden', 'true');
+      if (document.getElementById(id).hasAttribute('hidden')) {
+        console.log('succeeded')
+      } else {
+        console.log('failed')
+      }
     }
   }
 
   selectOption(option){
     this.selected=[...this.selected, option];
     this.toggleOption(option);
+    console.log(this.selected);
   }
 
   deSelectOption(option){
     let index = this.selected.indexOf(option);
-    if (index !== -1) {
-     console.log(this.selected);
-     // this.selected.splice(index, 1);
-     console.log(this.selected);
-     this.selected= this.selected.splice(index, 1);
-     console.log(this.selected);
-    }
+    let list = [...this.selected];
+
+    // if (index !== -1) {
+      console.log(list.splice(index+1, null));
+      this.selected= [...list.splice(index+1,1)];
+    // }
     this.toggleOption(option);
   }
 
