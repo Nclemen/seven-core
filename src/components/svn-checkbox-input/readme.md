@@ -10,7 +10,7 @@ title: checkbox input
 
 ```html
 <svn-checkbox-input el-id="programminglanguages" name="javascript"></svn-checkbox-input>
-<svn-checkbox-input el-id="programminglanguages" name="php"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="php" checked></svn-checkbox-input>
 <svn-checkbox-input el-id="programminglanguages" name="c#"></svn-checkbox-input>
 <svn-checkbox-input el-id="programminglanguages" name="java"></svn-checkbox-input>
 ```
@@ -18,7 +18,7 @@ title: checkbox input
 the code example above will result into this:
 
 <svn-checkbox-input el-id="programminglanguages" name="javascript"></svn-checkbox-input>
-<svn-checkbox-input el-id="programminglanguages" name="php"></svn-checkbox-input>
+<svn-checkbox-input el-id="programminglanguages" name="php" checked></svn-checkbox-input>
 <svn-checkbox-input el-id="programminglanguages" name="c#"></svn-checkbox-input>
 <svn-checkbox-input el-id="programminglanguages" name="java"></svn-checkbox-input>
 

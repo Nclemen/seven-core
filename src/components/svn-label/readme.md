@@ -1,6 +1,7 @@
-# svn-label
-
-
+---
+id: svn-label
+title: label
+---
 
 <!-- Auto Generated Below -->
 

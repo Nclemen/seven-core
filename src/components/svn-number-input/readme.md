@@ -7,15 +7,37 @@ title: number input
 
 <script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
+### min max example:
 
 ```html
 <svn-number-input el-id="numberinput" min="2" max="8"></svn-number-input>
 ```
 
-the code example above will result into this:
-
 <svn-number-input el-id="numberinput" min="2" max="8"></svn-number-input>
 
+### disabled example:
+
+```html
+<svn-number-input el-id="numberinput" min="2" max="8" disabled></svn-number-input>
+```
+
+<svn-number-input el-id="numberinput" min="2" max="8" disabled></svn-number-input>
+
+### readonly example:
+
+```html
+<svn-number-input el-id="numberinput" min="2" max="8" readonly></svn-number-input>
+```
+
+<svn-number-input el-id="numberinput" min="2" max="8" readonly></svn-number-input>
+
+### step example:
+
+```html
+<svn-number-input el-id="numberinput" min="0" max="100" step="10"></svn-number-input>
+```
+
+<svn-number-input el-id="numberinput" min="0" max="100" step="10"></svn-number-input>
 <!-- Auto Generated Below -->
 
 

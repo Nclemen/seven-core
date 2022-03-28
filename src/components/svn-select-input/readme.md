@@ -1,12 +1,14 @@
 ---
 id: svn-select-input
 title: select input
+
 ---
 
 ## Component example
 
 <script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
+### default:
 
 ```html
 <svn-select-input 
@@ -22,6 +24,24 @@ title: select input
 the code example above will result into this:
 
 <svn-select-input el-id="selectinput" options='[{"name":"scooter","value":"scooter"}, {"name":"car","value":"car"}, {"name":"bicycle","value":"bicycle"}]'></svn-select-input>
+
+### multiple select:
+
+```html
+<svn-select-input
+  el-id="selectinput"
+  options='[
+  {"name":"scooter","value":"scooter"},
+  {"name":"car","value":"car"},
+  {"name":"bicycle","value":"bicycle"}
+  ]'
+  multiple
+></svn-select-input>
+```
+
+the code example above will result into this:
+
+<svn-select-input el-id="selectinput" options='[{"name":"scooter","value":"scooter"}, {"name":"car","value":"car"}, {"name":"bicycle","value":"bicycle"}]' multiple></svn-select-input>
 
 <!-- Auto Generated Below -->
 

@@ -54,7 +54,8 @@ export class SvnSelectInput {
               class={{
                 'form-control block w-full': true,
                 'block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline': true
-              }}>
+              }}
+              multiple={this.multiple}>
         {this.options.map((option) =>
           <option value={option.value ? option.value : ""}>{option.name}</option>
         )}

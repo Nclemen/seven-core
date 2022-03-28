@@ -32,7 +32,7 @@ export class SvnCheckboxInput {
   render() {
     return (
       <Host id={this.elId} class="form-check">
-            <input type="checkbox" value={this.value} name={this.name}></input>
+            <input type="checkbox" value={this.value} name={this.name} checked={this.checked}></input>
             <label class="form-check-label inline-block text-gray-800" htmlFor={this.name}>
               {this.name}
             </label>

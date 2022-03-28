@@ -7,14 +7,23 @@ title: file input
 
 <script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
 
+### default:
 
 ```html
-<svn-file-input multiple el-id="fileinput" file-type="image"></svn-file-input>
+<svn-file-input el-id="fileinputone" file-type="image"></svn-file-input>
 ```
 
-the code example above will result into this:
+<svn-file-input el-id="fileinputone" file-type="image"></svn-file-input>
 
-<svn-file-input multiple el-id="fileinput" file-type="image"></svn-file-input>
+### multiple file select:
+
+To select multiple files hold down **ctrl** on windows or **command** on macos.
+
+```html
+<svn-file-input multiple el-id="fileinputtwo" file-type="image"></svn-file-input>
+```
+
+<svn-file-input multiple el-id="fileinputtwo" file-type="image"></svn-file-input>
 
 <!-- Auto Generated Below -->
 

@@ -16,6 +16,22 @@ the code example above will result into this:
 
 <svn-text-input></svn-text-input>
 
+```html
+<svn-text-input center></svn-text-input>
+```
+
+the code example above will result into this:
+
+<svn-text-input center></svn-text-input>
+
+```html
+<svn-text-input placeholder="enter your name here..."></svn-text-input>
+```
+
+the code example above will result into this:
+
+<svn-text-input placeholder="enter your name here..."></svn-text-input>
+
 <!-- Auto Generated Below -->
 
 
