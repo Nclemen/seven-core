@@ -5,7 +5,7 @@ title: multi select
 
 ## Component example
 
-<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@latest/dist/seven-core/seven-core.esm.js"></script>
 
 ```html
 <svn-multi-select 
@@ -37,6 +37,19 @@ the code example above will result into this:
 | `name`              | `name`     | the name attribute for the select element                      | `string`  | `undefined` |
 | `options`           | `options`  | an array of options for the select element with name and value | `any`     | `undefined` |
 
+
+## Dependencies
+
+### Depends on
+
+- [svn-chip](../svn-chip)
+
+### Graph
+```mermaid
+graph TD;
+  svn-multi-select --> svn-chip
+  style svn-multi-select fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

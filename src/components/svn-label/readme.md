@@ -3,6 +3,22 @@ id: svn-label
 title: label
 ---
 
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@latest/dist/seven-core/seven-core.esm.js"></script>
+
+<p>
+labels are used but form inputs.
+</p>
+
+```html
+<svn-label owner="textinput" text="enter your name"></svn-label>
+<svn-text-input el-id="textinput"></svn-text-input>
+```
+
+the code example above will result into this:
+
+<svn-label owner="textinput" text="enter your name"></svn-label>
+<svn-text-input el-id="textinput"></svn-text-input>
+
 <!-- Auto Generated Below -->
 
 

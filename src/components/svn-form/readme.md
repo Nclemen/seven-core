@@ -5,7 +5,7 @@ title: form
 
 ## Component example
 
-<script type="module" src="https://unpkg.com/@nclemen/seven-core@0.0.31/dist/seven-core/seven-core.esm.js"></script>
+<script type="module" src="https://unpkg.com/@nclemen/seven-core@latest/dist/seven-core/seven-core.esm.js"></script>
 
 
 ```html
@@ -33,8 +33,6 @@ title: form
   <svn-checkbox-input el-id="programminglanguages" name="php"></svn-checkbox-input>
   <svn-checkbox-input el-id="programminglanguages" name="c#"></svn-checkbox-input>
   <svn-checkbox-input el-id="programminglanguages" name="java"></svn-checkbox-input>
-
-  <svn-label owner=""></svn-label>
 </svn-form>
 ```
 
